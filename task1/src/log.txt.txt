@@ -1,0 +1,11 @@
+commit 30f11b7b816cb857f2ddf6d164536835b9c7a47e (HEAD -> master)
+Author: Nikita Sinkevich <nikon253@gmail.com>
+Date:   Sun Feb 17 15:00:34 2019 +0300
+
+    add status.txt
+
+commit 13c2d39a0d6dea5dd93424494bfde022c258cb63
+Author: Nikita Sinkevich <nikon253@gmail.com>
+Date:   Sun Feb 17 14:48:31 2019 +0300
+
+    add .gitignore
