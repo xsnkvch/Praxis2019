@@ -2,3 +2,6 @@
 .DS_Store/
 .idea/
 out/
+UI/node_modules/
+UI/package.json
+UI/package-lock.json
