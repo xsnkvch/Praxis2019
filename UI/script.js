@@ -51,7 +51,7 @@ class PostCollection {
 
   add(photoPost) {
     if (!this.constructor.validate(photoPost)) { return false; }
-    let newPostCollection = this.getPosts();
+    const newPostCollection = this.getPosts();
     newPostCollection.push(photoPost);
     this.setPosts(newPostCollection);
     return true;
@@ -187,7 +187,7 @@ console.log('skip = 3, default top: ', postList.getPage(3));
 console.log('skip = 4, top = 4: ', postList.getPage(4, 4));
 console.log('filter by author=\'defiler\': ', postList.getPage(0, 3, { author: 'defiler' }));
 console.log('\n');
-console.log('getPhotoPost:');
+console.log('get:');
 console.log('invalid argument: ', postList.get(''));
 console.log('id=100 (invalid): ', postList.get('100'));
 console.log('id = 3: ', postList.get('3'));
@@ -239,7 +239,7 @@ console.log('edit post with id=\'1\': ', postList.edit('1', { description: 'edit
 console.log('edited post with id=\'1\': ', postList.get('1'));
 console.log('trying to edit with invalid args: ', postList.edit('', 1));
 console.log('\n');
-console.log('removePhotoPost:');
+console.log('remove:');
 console.log('remove post with id=\'5\': ', postList.remove('5'));
 console.log('get post with id=\'5\':', postList.get('5'));
 console.log('all posts after removing post:', postList.getPosts());
