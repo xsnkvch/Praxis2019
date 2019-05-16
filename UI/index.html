@@ -1,29 +1,29 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang ="en">
     <head>
 		<meta charset="utf-8">
-		<title>defiler</title>
+		<title>défiler</title>
 		<meta name="viewport" content="width=device-width, initial-scale=0.8">
 		<link href="https://fonts.googleapis.com/css?family=Cabin:400,500,700" rel="stylesheet">
 		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="reset.css">
 	</head>
     <body>
 
 	    <header>  
-            <div class="title"><a href="index.html">defiler</a></div> 
+            <div class="title"><a href="index.html">défiler</a></div> 
 			<div class="menu">
-				<button>add post</button>
-				photographer
-				<button>log out</button>
+				<a id="username"></a>
+				<button id="add_button" style="display: none;">add post</button>
+				<button id="login_button">log in</button>
+				<button id="logout_button" style="display: none;">log out</button>
 			</div>
 		</header>
-
-		<script src="script.js"></script>
 
         <div class="filters">
             <div class="filter">
                 <div class="filter_description">USERNAME</div>
-                <input type="text" name="user">
+				<input type="text" name="user">
             </div>
             <div class="filter">
                 <div class="filter_description">DATE</div>
@@ -39,199 +39,18 @@
         </div>
 
 
-
-
-		<div class="post">
-				<div class="post_img"><img alt="img" src="images/img1.jpg"></div>
-				<div class="post_data">
-					<div class="post_auth">defiler</div>
-					<div class="post_date">March 4, 2019 1:59</div>
-					<div class="post_description">Director Stanley Kubrick can make your own living room seem creepy and unfamiliar.</div>
-					<div class="tags">
-						<div class="tag">The Shining</div>
-						<div class="tag">Stanley Kubrick</div>
-                    </div>
-                    <div class="post_menu">
-                        <img style="height: 1.7em; object-fit: contain;" src="images/liked.PNG">
-                        <div class="likes">10K</div>
-                    </div>
-				</div>	
-			</div>
-
-		<div class="post">
-				<div class="post_img"><img alt="Tarkovsky" src="images/img2.jpg"></div>
-				<div class="post_data">
-					<div class="post_auth">Tarkovsky</div>
-					<div class="post_date">March 2, 2019 10:00</div>
-					<div class="post_description">"Stalker" was released in 1979. A guide leads two men through an area known as the Zone to find a room that grants wishes.</div>
-					<div class="tags">
-						<div class="tag">STALKER</div> 
-						<div class="tag">filming</div>
-						<div class="tag">Andrei Tarkovsky</div>
-                    </div>
-                    <div class="post_menu">
-                        <img style="height: 1.7em; object-fit: contain;" src="images/liked.PNG">
-                        <div class="likes">500</div>
-                    </div>
-				</div>	
-			</div>
-
-			<div class="post">
-				<div class="post_img"><img alt="img" src="images/img3.jpg"></div>
-				<div class="post_data">
-					<div class="post_auth">rnduser</div>
-					<div class="post_date">March 2, 2019 9:59</div>
-					<div class="post_description"></div>
-					<div class="tags">
-						<div class="tag">scientific illustration</div> 
-						<div class="tag">black</div>
-						<div class="tag">arrow</div>
-                    </div>
-                    <div class="post_menu">
-                        <img style="height: 1.7em; object-fit: contain;" src="images/liked.PNG">
-                        <div class="likes">12</div>
-                    </div>
-				</div>	
-			</div>
-
-			<div class="post">
-				<div class="post_img"><img alt="img" src="images/img4.jpg"></div>
-				<div class="post_data">
-					<div class="post_auth">fash</div>
-					<div class="post_date">March 1, 2019 00:00</div>
-					<div class="post_description">BRUHBERRY</div>
-					<div class="tags">
-                    </div>
-                    <div class="post_menu">
-                        <img style="height: 1.7em; object-fit: contain;" src="images/not_liked.PNG">
-                        <div class="likes">154</div>
-                    </div>
-				</div>	
-			</div>
-
-
-			<div class="post">
-					<div class="post_img"><img alt="img" src="images/img5.jpg"></div>
-					<div class="post_data">
-						<div class="post_auth">photographer</div>
-						<div class="post_date">February 28, 2019 15:35</div>
-						<div class="post_description">me rn.</div>
-						<div class="tags">
-							<div class="tag">УППППП</div> 
-							<div class="tag">в</div>
-							<div class="tag">последний</div>
-							<div class="tag">день</div>
-						</div>
-						<div class="post_menu">
-								<img style="height: 1.7em; object-fit: contain;" src="images/not_liked.PNG" >
-								<div class="likes">2</div>
-								<button>edit</button>
-								<button>delete</button>
-							</div>
-					</div>	
-				</div>	
-
-		<div class="post">
-				<div class="post_img"><img alt="img" src="images/img6.PNG"></div>
-				<div class="post_data">
-					<div class="post_auth">photographer</div>
-					<div class="post_date">February 26, 2019 1:12</div>
-					<div class="post_description">Error page concept.</div>
-					<div class="tags">
-						<div class="tag">defiler</div> 
-						<div class="tag">yellow</div>
-						<div class="tag">up</div>
-					</div>
-					<div class="post_menu">
-							<img style="height: 1.7em; object-fit: contain;" src="images/liked.PNG" >
-							<div class="likes">13</div>
-							<button>edit</button>
-							<button>delete</button>
-						</div>
-				</div>	
-			</div>
-
-			<div class="post">
-					<div class="post_img"><img alt="img" src="images/img7.jpg"></div>
-					<div class="post_data">
-						<div class="post_auth">Obschjitie_6</div>
-						<div class="post_date">February 23, 2019 10:10</div>
-						<div class="post_description">T R U T H</div>
-						<div class="tags">
-							<div class="tag">shestiorka</div>
-						</div>
-						<div class="post_menu">
-								<img style="height: 1.7em; object-fit: contain;" src="images/liked.PNG" >
-								<div class="likes">666</div>
-							</div>
-					</div>	
-				</div>
-
-			<div class="post">
-					<div class="post_img"><img alt="img" src="images/img8.jpg"></div>
-					<div class="post_data">
-						<div class="post_auth">xsnkvch</div>
-						<div class="post_date">February 21, 2019 15:26</div>
-						<div class="post_description"></div>
-						<div class="tags">
-						</div>
-						<div class="post_menu">
-							<img style="height: 1.7em; object-fit: contain;" src="images/not_liked.PNG">
-							<div class="likes">56</div>
-						</div>
-					</div>	
-				</div>
-	
-				<div class="post">
-						<div class="post_img"><img alt="img" src="images/img9.jpg"></div>
-						<div class="post_data">
-							<div class="post_auth">sovmod</div>
-							<div class="post_date">February 21, 2019 15:24</div>
-							<div class="post_description">«Плита ограды ПО‑2»
-									Проектная организация: «Мосгорстройматериалы»; 
-									Архитекторы: коллектив под руководством Б. Лахмана; 
-									Годы создания: 1970-е (первая половина)</div>
-							<div class="tags">
-								<div class="tag">USSR</div>
-								<div class="tag">design</div>
-								<div class="tag">совмод</div>								
-							</div>
-							<div class="post_menu">
-								<img style="height: 1.7em; object-fit: contain;" src="images/not_liked.PNG">
-								<div class="likes">72</div>
-							</div>
-						</div>	
-					</div>
-	
-					<div class="post">
-							<div class="post_img"><img alt="img" src="images/img10.jpg"></div>
-							<div class="post_data">
-								<div class="post_auth">user</div>
-								<div class="post_date">February 5, 2019 15:24</div>
-								<div class="post_description">Люблю Шагала. Все. Это весь пост.</div>
-								<div class="tags">
-									<div class="tag">моя</div>
-									<div class="tag">любовь</div>
-									<div class="tag">безмерна</div>	
-									<div class="tag">Над городом</div>
-									<div class="tag">Шагал</div>	
-									<div class="tag">ккубизм</div>						
-								</div>
-								<div class="post_menu">
-									<img style="height: 1.7em; object-fit: contain;" src="images/liked.PNG">
-									<div class="likes">4M</div>
-								</div>
-							</div>	
-						</div>
-
+		<div id="feed"> </div>
+		<script src="script.js"></script>
+		<script src="view.js"></script>
+        <script src="script2.js"></script>
 
 		<div class="load_more">
             <div><button>load more posts</button></div>
         </div>
 
 		<footer style="text-align: center; font-family: Georgia, serif; font: 1em;">
-            Defiler - Никита Синкевич, 2 курс 8 группа (nikon253@gmail.com)<br>
-            Дата последнего изменения: 20.03.2019
+            Défiler - Никита Синкевич, 2 курс 8 группа (nikon253@gmail.com)<br>
+            Дата последнего изменения: 16.05.2019
 		</footer>
 	</body>
 </html>
