@@ -250,7 +250,7 @@ header .menu{
 	object-fit: contain;
 }
 
-.load_more{
+#load_more{
 		display: flex;
 		width: 100%;
 		justify-content: center;
@@ -264,4 +264,58 @@ footer {
 	font-style: italic;
 	color: rgb(36, 36, 36);
 	font-size: 0.9em;
+}
+
+.logIN{
+	width: 100%;
+	margin: 25% 0 25% 0;
+	height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+textarea{
+    resize: none;
+	height: 120px;
+	width: 100%;
+	max-width: 300px;
+	border: none;
+	font-family: Georgia, serif; 
+	font-size: 1rem;
+	font-style: inherit;
+}
+
+.DragDropInput{
+	width: 500px;
+	height: 500px;
+	margin: 0pt;
+	object-fit: contain;
+    padding: 0;
+	opacity: 0;
+}
+
+.DragDropText{
+	font-family: Georgia, serif; 
+	font-style: italic;
+    width: 100%;
+    text-align: center;
+    top:50%;
+    position: relative;
+    color: black;
+}
+
+.background{
+    max-width: 500px;
+    width:100%;
+    border: none;
+}
+
+.error{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 500;
+	font-size: 2.5em;
+	width: 100%;
+	text-align: center;
+	z-index: 1;
 }

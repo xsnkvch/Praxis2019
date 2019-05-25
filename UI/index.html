@@ -9,47 +9,32 @@
 	</head>
     <body>
 
-	    <header>  
+	    <header class="header">  
             <div class="title"><a href="index.html">défiler</a></div> 
 			<div class="menu">
 				<a id="username"></a>
-				<button id="add_button" style="display: none;">add post</button>
-				<button id="login_button">log in</button>
-				<button id="logout_button" style="display: none;">log out</button>
-			</div>
+				<button OnClick="DisplayAddForm()" id="add_button" style="display: none;">add post</button>
+                <button OnClick="DisplayLogIn()" id="log_in_button" style="display: none;">log in</button>
+                <button OnClick="logOut()" id="log_out_button">log out</button>
+			</div> 
 		</header>
 
-        <div class="filters">
-            <div class="filter">
-                <div class="filter_description">USERNAME</div>
-				<input type="text" name="user">
-            </div>
-            <div class="filter">
-                <div class="filter_description">DATE</div>
-                <input type="date" name="date_interval_start">
-                <div class="filter_description" style="text-align: center;">through</div>
-                <input type="date" name="date_interval_end">
-            </div>
-            <div class="filter">
-                    <div class="filter_description">TAGS</div>
-                    <input type="text" name="date_interval_start" placeholder="start each one with # symbol">
-            </div>
-            <div class="filter" style="justify-content: flex-end;"><button>apply filters</button></div>    
-        </div>
-
-
-		<div id="feed"> </div>
-		<script src="script.js"></script>
-		<script src="view.js"></script>
-        <script src="script2.js"></script>
-
-		<div class="load_more">
-            <div><button>load more posts</button></div>
+        <div class="main">
+    		<div id="feed"> </div>
+	    	<script src="PostCollection.js"></script>
+    		<script src="view.js"></script>
+            <script src="Model.js"></script>
+            <script src="Feed.js"></script>
+            <script src="LogIn.js"></script>
+            <script src="AddPost.js"></script>
+            <script src="EditPost.js"></script>
+            <script src="init.js"></script>
+            <script src="main.js"></script>
         </div>
 
 		<footer style="text-align: center; font-family: Georgia, serif; font: 1em;">
             Défiler - Никита Синкевич, 2 курс 8 группа (nikon253@gmail.com)<br>
-            Дата последнего изменения: 16.05.2019
+            Дата последнего изменения: 25.05.2019
 		</footer>
 	</body>
 </html>

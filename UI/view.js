@@ -2,16 +2,14 @@
 class View {
   setUser(user) {
     this._user = user;
-    if (user) {
-      const username = document.getElementById('username');
-      username.innerHTML = user;
-      const addButton = document.getElementById('add_button');
-      addButton.style.display = 'inline';
-      const loginButton = document.getElementById('login_button');
-      loginButton.style.display = 'none';
-      const logoutButton = document.getElementById('logout_button');
-      logoutButton.style.display = 'inline';
-    }
+    const username = document.getElementById('username');
+    username.innerHTML = user;
+    const addButton = document.getElementById('add_button');
+    addButton.style.display = 'inline';
+    const loginButton = document.getElementById('log_in_button');
+    loginButton.style.display = 'none';
+    const logoutButton = document.getElementById('log_out_button');
+    logoutButton.style.display = 'inline';
   }
 
   _generatePostHTML(post) {
@@ -30,14 +28,14 @@ class View {
     postHTML += `</div>
         <div class="post_menu">`;
     if (post.likes.includes(this._user)) {
-      postHTML += '   <img style="height: 1.7em; object-fit: contain; " src="images/liked.PNG">';
+      postHTML += `<img OnClick="dom.pressLike('${post.id}')" style="height: 1.7em; object-fit: contain; " src="images/liked.PNG">`;
     } else {
-      postHTML += '   <img style="height: 1.7em; object-fit: contain; " src="images/not_liked.PNG">';
+      postHTML += `<img OnClick="dom.pressLike('${post.id}')" style="height: 1.7em; object-fit: contain; " src="images/not_liked.PNG">`;
     }
-    postHTML += `        <div class="likes">${post.likes.length}</div>`;
+    postHTML += `<div class="likes">${post.likes.length}</div>`;
     if (post.author === this._user) {
-      postHTML += `<button>edit</button>
-        <button>delete</button>`;
+      postHTML += `<button OnClick="DisplayEditForm('${post.id}')">edit</button>
+        <button OnClick="dom.removePost('${post.id}')">delete</button>`;
     }
     postHTML += `    </div>
     </div>
@@ -48,26 +46,27 @@ class View {
   pushBackPost(post) {
     const feed = document.getElementById('feed');
     const postInFeed = document.createElement('post');
-    postInFeed.id = `post${post.id}`;
+    postInFeed.id = `${post.id}post`;
     postInFeed.innerHTML = this._generatePostHTML(post);
     feed.appendChild(postInFeed);
   }
 
   removePost(id) {
     const list = document.getElementById('feed');
-    const elem = document.getElementById(`post${id}`);
+    const elem = document.getElementById(`${id}post`);
     list.removeChild(elem);
   }
 
   editPost(id, post) {
-    const elem = document.getElementById(`post${id}`);
+    const elem = document.getElementById(`${id}post`);
     elem.innerHTML = this._generatePostHTML(post);
+    console.log(elem.innerHTML);
   }
 
   insertPost(post, nextId) {
     const feed = document.getElementById('feed');
     const postInFeed = document.createElement('postInFeed');
-    postInFeed.id = `post${post.id}`;
+    postInFeed.id = `${post.id}post`;
     postInFeed.innerHTML = this._generatePostHTML(post);
     feed.insertBefore(postInFeed, feed.children[nextId]);
   }

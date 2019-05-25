@@ -13,16 +13,27 @@ class PostCollection {
     }
     if (typeof filterConfig === 'object') {
       posts = posts.filter((post) => {
-        if (filterConfig.hasOwnProperty('date')) {
-          if (Date.parse(post.createdAt) < Date.parse(filterConfig.dateBegin) || Date.parse(post.createdAt) > Date.parse(filterConfig.dateEnd)) {
+        if (filterConfig.hasOwnProperty('dateBegin')) {
+          if (Date.parse(post.createdAt) < Date.parse(filterConfig.dateBegin)) {
+            return false;
+          }
+        }
+        if (filterConfig.hasOwnProperty('dateEnd')) {
+          if (Date.parse(post.createdAt) > Date.parse(filterConfig.dateEnd)) {
             return false;
           }
         }
         if (filterConfig.hasOwnProperty('author')) {
-          if (filterConfig.author !== post.author) { return false; }
+          if (post.author.search(new RegExp(filterConfig.author, 'i')) === -1) { return false; }
         }
         if (filterConfig.hasOwnProperty('tags')) {
-          if (!filterConfig.tags.every(tag => post.tags.includes(tag))) { return false; }
+          if (!filterConfig.tags.every((tag) => {
+            // eslint-disable-next-line no-restricted-syntax
+            for (const postTag of post.tags) {
+              if (postTag.search(new RegExp(tag, 'i')) !== -1) { return true; }
+            }
+            return false;
+          })) { return false; }
         }
         return true;
       });
@@ -65,8 +76,7 @@ class PostCollection {
     const post = this.get(id);
     if (post) {
       if (photoPost.hasOwnProperty('description')) { post.description = photoPost.description; }
-      if (photoPost.hasOwnProperty('photoLink')) { post.photoLink = photoPost.photoLink; }
-      if (photoPost.hasOwnProperty('tags')) { post.hashTags = photoPost.tags; }
+      if (photoPost.hasOwnProperty('tags')) { post.tags = photoPost.tags; }
       return true;
     }
     return false;
