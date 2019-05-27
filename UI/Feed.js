@@ -52,42 +52,6 @@ function displayPosts() {
   dom.createPage(filterConfig);
 }
 
-// function addPhotoPost(post) {
-//   const posts = JSON.parse(localStorage.photoPosts);
-//   if (posts.addPhotoPost(post)) {
-//     localStorage.photoPosts = JSON.stringify(posts);
-//   }
-//   const feed = document.getElementsByClassName('feed')[0];
-//   feed.innerHTML = '';
-
-//   localStorage.state = '2';
-//   dom.displayPosts(posts.getPage());
-
-//   const actuall_amount = document.getElementsByClassName('post').length;
-//   if (actuall_amount < posts.length) { document.getElementsByClassName('btn-load-more')[0].style.display = 'block'; } else return false;
-// }
-// function removePhotoPost(id) {
-//   const posts = JSON.parse(localStorage.photoPosts);
-//   if (posts.removePhotoPost(id)) {
-//     localStorage.photoPosts = JSON.stringify(posts);
-//     if (dom.removePhotoPost(id)) {
-//       const actuall_amount = document.getElementsByClassName('post').length;
-//       if (actuall_amount < posts.getPage(0, posts.length, filterConfig).length) { dom.displayPosts([posts.getPage(actuall_amount, 1, filterConfig)[0]]); }
-//       if (posts.length <= actuall_amount + 1) { document.getElementsByClassName('btn-load-more')[0].style.display = 'none'; }
-//     }
-//     return true;
-//   }
-//   return false;
-// }
-// function editPhotoPost(id, newPost) {
-//   const posts = JSON.parse(localStorage.photoPosts);
-//   if (posts.editPhotoPost(id, newPost)) {
-//     localStorage.photoPosts = JSON.stringify(posts);
-//     dom.editPhotoPost(id, posts.getPhotoPost(id));
-//     return true;
-//   }
-//   return false;
-// }
 
 function filterChange(option, el) {
   // eslint-disable-next-line default-case
